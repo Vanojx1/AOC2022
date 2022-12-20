@@ -44,7 +44,6 @@ def main(day_input):
                     row += colored(get_char(path2, cpos), 'red')
                 else:
                     row += heightmap[cpos]
-                    # print('⬜️', end='')
             print(row)
         print()
 
