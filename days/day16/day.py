@@ -10,7 +10,7 @@ def main(day_input):
         rates[valve] = rate
         valve_connections[valve] = dest
 
-    valve_mask = {n: 10**i for i, n in enumerate(sorted(valve_connections.keys()))}
+    valve_mask = {n: int(str(10**i), 2) for i, n in enumerate(sorted(valve_connections.keys()))}
     rates = {valve_mask[k]: v for k, v in rates.items()}
     valve_connections = {valve_mask[k]: [valve_mask[d] for d in v] for k, v in valve_connections.items()}
 
