@@ -44,7 +44,7 @@ def main(day_input):
         rmap = defaultdict(int)
         def set_map(p, u):
             nonlocal rmap
-            su = int(str(sum(u[1:])), 2)
+            su = sum(u[1:])
             if p > rmap[su]:
                 rmap[su] = p
                 yield su, (p, su)
