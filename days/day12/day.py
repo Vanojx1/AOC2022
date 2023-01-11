@@ -1,13 +1,6 @@
-import heapq
 from termcolor import colored
-import math
-
-class Point(complex):
-    def __lt__(self, o):
-        return self.real < o.real or self.imag < o.imag
-    def __add__(self, o) -> 'Point':
-        r = super().__add__(o)
-        return Point(r.real, r.imag) 
+from utils import Point
+import heapq, math
 
 def d(a, b): return math.sqrt((a.real-b.real)**2+(a.imag-b.imag)**2)
 
@@ -67,6 +60,6 @@ def main(day_input):
     path = walk(start)
     min_path = min([walk(s) for s, h in heightmap.items() if h == 'a'], key=lambda p: len(p) if p else float('inf'))
 
-    print_map(min_path, path)
+    # print_map(min_path, path)
 
     return len(path)-1, len(min_path)-1
