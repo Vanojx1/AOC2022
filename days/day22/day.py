@@ -22,7 +22,6 @@ def main(day_input):
             row_min_max[y] = (min(row_min_max[y][0], x-1), max(row_min_max[y][1], x+1))
             col_min_max[x] = (min(col_min_max[x][0], y-1), max(col_min_max[x][1], y+1))
 
-
     # STEP 2
     #
     # Finding face size, very slow but...
